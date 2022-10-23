@@ -1,1 +1,243 @@
-  
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.home .content header {
+  background-color: rgba(0, 0, 0, 8);
+  position: fixed;
+  width: 100vh;
+  z-index: 100;
+  top: 0;
+}
+
+.home .content header .content-header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.home .content header .content-header h1 {
+  text-align: center;
+  color: #ff5000;
+}
+
+.home .content header .content-header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.home .content header .content-header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.home .content header .content-header nav ul a:hover {
+  color: #ff5000;
+}
+
+.home .content header .content-header .redes a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.home .content header .content-header .redes a:hover {
+  color: #ff5000;
+}
+
+.home .content .presentation {
+  max-width: 1100px;
+  height: 100vh;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .content .presentation .bienvenida {
+  font: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.home .content .presentation h2 {
+  font-size: 55px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.home .content .presentation h2 span {
+  font-size: 25px;
+  color: #ff5000;
+}
+
+.home .content .presentation .description {
+  max-width: 700px;
+  margin: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.home .content .presentation a {
+  text-decoration: none;
+  display: flex;
+  margin: 25px;
+  padding: 20px 25px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.home .content .presentation a:hover {
+  background-color: #ff5000;
+}
+
+.icon-nav {
+  color: #fff;
+  display: none;
+}
+
+/*SECTION ABOUT ME*/
+
+.aboutme {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 15px;
+  color: #111135;
+  display: flex;
+}
+
+.aboutme .content-photo {
+  max-width: 400px;
+  margin-right: 80px;
+}
+
+.aboutme .content-photo img {
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+}
+
+.aboutme .about-me {
+  margin: 0 40px;
+}
+
+.aboutme .about-me .title-about-me {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #111135;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+.aboutme .about-me h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+.aboutme .about-me h2 span {
+  color: #ff5000;
+}
+
+.aboutme .about-me h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.aboutme .about-me p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #565656;
+  margin-bottom: 12px;
+}
+
+.aboutme .about-me a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.aboutme .about-me a:hover {
+  background-color: #ff5000;
+  color: #fff;
+}
+
+/*SECTION SERVICES*/
+
+.services {
+  padding: 100px 15px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.services .title-services {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #111135;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+.services .fila {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.services .fila .service {
+  max-width: 350px;
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.services .fila .service.hover {
+  box-shadow: 5px 5px 10px #565656, -5px -5px 10px;
+}
