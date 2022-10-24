@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -23,16 +26,31 @@
             <h1>/AO/</h1>
             <nav class="navbar">
               <ul class="links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                  <a
+                    href="#home"
+                    class="seleccionado"
+                    onclick="seleccionar(this)"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#aboutme" onclick="seleccionar(this)">About</a>
+                </li>
+                <li>
+                  <a href="#services" onclick="seleccionar(this)">Services</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#contact" onclick="seleccionar(this)">Contact</a>
+                </li>
               </ul>
             </nav>
 
             <!--ICONOS RESPONSIVE-->
-            <div class="icon-nav">
+            <div class="icon-nav" onclick="responsiveMenu()">
               <i class="fa-solid fa-bars"></i>
             </div>
 
@@ -61,7 +79,7 @@
             itaque facilis saepe! Modi, consequatur quae? Accusantium eligendi
             odio voluptate labore?
           </p>
-          <a href="#portafolio">Ir a portafolio</a>
+          <a href="#portfolio">Ir a portafolio</a>
         </div>
       </div>
     </section>
@@ -215,6 +233,59 @@
 
     <!-- SECTION CONTACT -->
 
-    <section></section>
+    <section class="contact">
+      <h3 class="title-contact">Contactanos ahora</h3>
+      <div class="content-form">
+        <form action="">
+          <div class="fila mitad">
+            <input
+              type="text"
+              placeholder="Nombre Completo"
+              class="input-mitad"
+            />
+            <input
+              type="text"
+              placeholder="Dirección de Email"
+              class="input-mitad"
+            />
+          </div>
+          <div class="fila-contact">
+            <input type="text" placeholder="Tema..." class="input-full" />
+          </div>
+          <div class="fila-contact">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
+
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION FOOTER -->
+
+    <footer>
+      <p>Todos los derechos reservados - 2022</p>
+      <div class="redes">
+        <a
+          href="https://www.facebook.com/profile.php?id=100042817663563"
+          target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/_poncho07/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/Alfonso_Ortiz07" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -40,6 +40,10 @@ html {
   color: #ff5000;
 }
 
+.home .content header .content-header .seleccionado {
+  color: #ff5000;
+}
+
 .home .content header .content-header nav ul {
   list-style: none;
   display: flex;
@@ -441,4 +445,182 @@ html {
 .portfolio .fila-portfolio .proyect:hover .info-proyect {
   opacity: 1;
   bottom: 0;
+}
+
+/* SECTION CONTACT*/
+
+.contact {
+  padding: 100px 15px;
+}
+
+.contact .title-contact {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #111135;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+.contact .content-form {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact .content-form .fila-contact {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.contact .content-form .mitad {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .content-form input,
+.contact .content-form textarea {
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid #919191;
+}
+
+.contact .content-form .mitad input {
+  width: 48%;
+}
+
+.contact .content-form .input-full {
+  width: 100%;
+}
+
+.contact .btn-enviar {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact .btn-enviar:hover {
+  background-color: #ff5000;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 5px;
+  font-size: 26px;
+}
+
+/* SECTION RESPONSIVE*/
+
+@media screen and (max-width: 800px) {
+  .redes {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  nav.resposive {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav.responsive ul {
+    display: block !important;
+    text-align: center;
+  }
+  nav.responsive ul li {
+    margin: 5px 0;
+  }
+
+  .icon-nav {
+    display: block;
+  }
+
+  .home .contenido .presentation h2 {
+    font-size: 48px;
+  }
+
+  .aboutme {
+    padding: 50px 0;
+    display: block;
+  }
+
+  .aboutme .content-photo {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .aboutme .content-photo img {
+    padding: 8px;
+  }
+
+  .aboutme .about-me .title-about-me {
+    text-align: center;
+  }
+
+  .aboutme .about-me h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .services {
+    padding: 50px 15px;
+  }
+
+  .services .fila {
+    display: block;
+  }
+
+  .services .fila .service {
+    margin: 10px auto;
+  }
+
+  .content-skills {
+    padding: 50px 20px;
+  }
+
+  .portfolio {
+    padding: 50px 0;
+  }
+
+  .portfolio .fila-portfolio {
+    display: block;
+  }
+
+  .portfolio .fila-portfolio .proyect {
+    margin: 10px auto;
+  }
+
+  .contact {
+    padding: 50px 15px;
+  }
+
+  .contact .content-form .mitad {
+    margin: 15px;
+    display: block;
+  }
+
+  .contact .content-form .mitad input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
