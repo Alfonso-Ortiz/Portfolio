@@ -551,12 +551,12 @@ footer a {
   }
 
   .icon-nav {
+    position: fixed;
     display: flex;
     color: rgb(255, 255, 255);
     font-size: 20px;
-    top: 0;
-    right: 0;
-    align-self: flex-end;
+    top: 1.8%;
+    right: 2%;
   }
 
   .icon-nav:hover {
@@ -569,11 +569,13 @@ footer a {
   }
 
   .main header .content-header {
+    width: 100vw;
     padding: 1rem 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     height: 50px;
+    position: fixed;
   }
 
   .main header .content-header .navbar {
@@ -581,7 +583,7 @@ footer a {
     transform: translateX(-100%);
     transition: 0.5s;
     background-color: #000;
-    margin-right: 9.5rem;
+    margin-right: 5.5rem;
   }
 
   .main header .content-header .navbar_show {
@@ -618,7 +620,12 @@ footer a {
   }
 
   .main .presentation {
-    margin: 2rem 0;
+    height: 70vh;
+  }
+
+  .main .presentation p {
+    margin: 0;
+    padding: 0;
   }
 
   .main .contenido .presentation h2 {
@@ -674,6 +681,11 @@ footer a {
 
   .portfolio .fila-portfolio .proyect {
     margin: 10px auto;
+  }
+
+  .portfolio .fila-portfolio .proyect h4 a {
+    text-decoration: none;
+    color: inherit;
   }
 
   .contact {
