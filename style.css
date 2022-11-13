@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.home {
+.main {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("img/fondo-inicio.jpg");
   background-size: cover;
@@ -18,66 +18,101 @@ html {
   height: 100vh;
 }
 
-.home .content header {
-  background-color: rgba(0, 0, 0, 8);
+.main header {
   position: fixed;
-  width: 100vh;
+  width: 100vw;
   z-index: 100;
   top: 0;
 }
 
-.home .content header .content-header {
-  max-width: 1100px;
+.main header .content-header {
   margin: auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 8);
 }
 
-.home .content header .content-header h1 {
-  text-align: center;
+.main header .content-header h1 {
   color: #ff5000;
 }
 
-.home .content header .content-header .seleccionado {
-  color: #ff5000;
-}
-
-.home .content header .content-header nav ul {
+.main header .content-header nav ul {
   list-style: none;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.home .content header .content-header nav ul li a {
+.main header .content-header nav ul li a {
   text-decoration: none;
   color: #fff;
   margin: 0 12px;
   font-weight: 400;
   transition: 0.5s;
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
-.home .content header .content-header nav ul a:hover {
+.main header .content-header nav ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 6px solid var(--clr);
+  -webkit-text-stroke: 1px var(--clr);
+}
+
+.main header .content-header nav ul li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 10px var(--clr));
+}
+
+.main header .content-header nav ul a:hover {
   color: #ff5000;
 }
 
-.home .content header .content-header .redes a {
+.main header .content-header .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.main header .content-header .navbar .logo {
+  height: 90px;
+}
+
+.main header .content-header .redes {
+  margin-right: 3rem;
+}
+
+.main header .content-header .redes a {
   text-decoration: none;
   color: #fff;
-  display: inline-block;
   margin-left: 10px;
   transition: 0.5s;
 }
 
-.home .content header .content-header .redes a:hover {
+.main header .content-header .redes a:hover {
   color: #ff5000;
 }
 
-.home .content .presentation {
+.main .presentation {
   max-width: 1100px;
   height: 100vh;
-  margin: auto;
+  margin: 50px auto;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -85,32 +120,32 @@ html {
   justify-content: center;
 }
 
-.home .content .presentation .bienvenida {
+.main .presentation .bienvenida {
   font: 16px;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
-.home .content .presentation h2 {
+.main .presentation h2 {
   font-size: 55px;
   margin-bottom: 25px;
   text-align: center;
 }
 
-.home .content .presentation h2 span {
+.main .presentation h2 span {
   font-size: 25px;
   color: #ff5000;
 }
 
-.home .content .presentation .description {
+.main .presentation .description {
   max-width: 700px;
   margin: 25px;
   font-size: 18px;
-  text-align: center;
+  text-align: justify;
 }
 
-.home .content .presentation a {
+.main .presentation a {
   text-decoration: none;
   display: flex;
   margin: 25px;
@@ -123,12 +158,11 @@ html {
   transition: 0.5s;
 }
 
-.home .content .presentation a:hover {
+.main .presentation a:hover {
   background-color: #ff5000;
 }
 
 .icon-nav {
-  color: #fff;
   display: none;
 }
 
@@ -137,7 +171,7 @@ html {
 .aboutme {
   max-width: 1100px;
   margin: auto;
-  padding: 100px 15px;
+  padding: 90px 15px;
   color: #111135;
   display: flex;
 }
@@ -148,10 +182,11 @@ html {
 }
 
 .aboutme .content-photo img {
-  padding: 20px;
-  width: 100%;
+  padding-right: 0.5rem;
+  height: 380px;
+  width: 230px;
   border-radius: 20px;
-  background-color: #f3f3f3;
+  background-color: rgba(255, 103, 2, 0.8);
 }
 
 .aboutme .about-me {
@@ -322,30 +357,23 @@ html {
 
 .content-skills .skills .barra .barra-progreso1 {
   background-color: #fff;
-  width: 50%;
+  width: 80%;
   height: 6px;
-  animation: progreso1 2s forwards;
+  animation: progreso1 2.5s forwards;
 }
 
 .content-skills .skills .barra .barra-progreso2 {
   background-color: #fff;
   width: 50%;
   height: 6px;
-  animation: progreso2 2s forwards;
+  animation: progreso2 2.5s forwards;
 }
 
 .content-skills .skills .barra .barra-progreso3 {
   background-color: #fff;
   width: 40%;
   height: 6px;
-  animation: progreso3 2s forwards;
-}
-
-.content-skills .skills .barra .barra-progreso4 {
-  background-color: #fff;
-  width: 30%;
-  height: 6px;
-  animation: progreso4 2s forwards;
+  animation: progreso3 2.5s forwards;
 }
 
 /* Creacion animación de las barras*/
@@ -355,7 +383,7 @@ html {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 80%;
   }
 }
 
@@ -374,15 +402,6 @@ html {
   }
   100% {
     width: 40%;
-  }
-}
-
-@keyframes progreso4 {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 30%;
   }
 }
 
@@ -526,36 +545,83 @@ footer a {
 
 /* SECTION RESPONSIVE*/
 
-@media screen and (max-width: 800px) {
-  .redes {
-    display: none;
-  }
-  nav {
-    display: none;
-  }
-  nav.resposive {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    padding: 10px 0;
-  }
-
-  nav.responsive ul {
-    display: block !important;
-    text-align: center;
-  }
-  nav.responsive ul li {
-    margin: 5px 0;
+@media screen and (max-width: 600px) {
+  .main .presentation .bienvenida {
+    margin-top: 280px;
   }
 
   .icon-nav {
-    display: block;
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    top: 0;
+    right: 0;
+    align-self: flex-end;
   }
 
-  .home .contenido .presentation h2 {
+  .icon-nav:hover {
+    color: #ff5000;
+    cursor: pointer;
+  }
+
+  .main header {
+    width: 30vw;
+  }
+
+  .main header .content-header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50px;
+  }
+
+  .main header .content-header .navbar {
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    background-color: #000;
+    margin-right: 9.5rem;
+  }
+
+  .main header .content-header .navbar_show {
+    transform: translateX(0);
+  }
+
+  .main header .content-header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0 0.5rem;
+  }
+
+  .main header .content-header nav ul li a {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main header .content-header .navbar .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 30%;
+    gap: 1.5rem;
+  }
+
+  .main header .content-header .redes {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .main .presentation {
+    margin: 2rem 0;
+  }
+
+  .main .contenido .presentation h2 {
     font-size: 48px;
   }
 

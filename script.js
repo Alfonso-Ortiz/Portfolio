@@ -1,3 +1,11 @@
+// MENU HAMBURGUESA
+const iconMenu = document.querySelector(".icon-nav");
+const navShow = document.querySelector(".navbar");
+
+iconMenu.addEventListener("click", () => {
+  navShow.classList.toggle("navbar_show");
+});
+
 function seleccionar(link) {
   let opciones = document.querySelectorAll("#links a");
   opciones[0].className = "";
@@ -9,15 +17,6 @@ function seleccionar(link) {
 
   let x = document.getElementById("nav");
   x.className = "";
-}
-
-function responsiveMenu() {
-  let x = document.getElementById("nav");
-  if (x.className === "") {
-    x.className = "responsive";
-  } else {
-    x.className = "";
-  }
 }
 
 window.onscroll = function () {
@@ -32,6 +31,5 @@ function efectoHabilidades() {
     document.getElementById("html").classList.add("barra-progreso1");
     document.getElementById("html").classList.add("barra-progreso2");
     document.getElementById("html").classList.add("barra-progreso3");
-    document.getElementById("html").classList.add("barra-progreso4");
   }
 }
